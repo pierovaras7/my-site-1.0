@@ -1,0 +1,251 @@
+:root {
+    --bg-color: rgb(24,24,24);
+    --title-color: white;
+    --text-color: rgb(117, 117, 117);
+}
+
+.namedev{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #fafafa;
+    background: linear-gradient(to right, #bcf9bb, #ee4343);
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+body{
+   margin: 0;
+   background-color: var(--bg-color);
+   padding: 0px 12%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.header{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+}
+
+.smooth-scroll {
+    transition: color 0.3s ease-in-out; /* Transición para el cambio de color (puedes ajustar la duración y el tipo de animación según desees) */
+    color: black; /* Color inicial del enlace */
+}
+
+.smooth-scroll:hover {
+    color: blue; /* Color al pasar el cursor sobre el enlace */
+}
+
+.header > a{
+    text-decoration: none;
+}
+
+
+.header-item{
+    padding: 10px 0;
+    text-align: center;
+    color: var(--title-color);
+    height: rem;
+}
+
+.content{
+    background-color: var(--bg-color);
+}
+
+.sect{
+    height: 100vh;
+}
+
+.sect-present{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 20px;
+}
+
+.title{
+    color: var(--title-color);
+}
+
+.text-light{
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.sect-present-profile{
+    padding: 10px;
+    img{
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+.sect-skills-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.sect-skills-logos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0;
+}
+
+.skills-svg{
+    width: 64px;
+    height: 64px;
+    /* border: 1px solid rgb(204, 192, 191); */
+    padding: 18px;
+    margin: auto;
+}
+
+.skills-svg:hover{
+    border: 1px solid rgb(95, 95, 95);
+    border-radius: 10px;
+}
+
+.sect-projects-details{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.project-card{
+    position: relative;
+    padding: 0;
+    img{
+        max-width: 100%;
+    }
+    
+}
+
+.project-card-text{
+    display: none;
+    position: absolute;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 1rem;
+    bottom: 0;
+    background-color: black;
+}
+
+.project-card-text > p{
+    margin: 8px;
+}
+
+.project-card:hover > .project-card-text{
+    display: block;
+}
+
+
+.project-title{
+    color: var(--title-color);
+}
+
+/* CONTACT US */
+
+.sect-contact-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.sect-contact-form{
+    background-color: rgba(86, 86, 86, 0.315);
+    box-shadow: 1px 1px rgb(231, 231, 231);
+    padding: 8% 10% ;
+    margin: auto;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 15px; 
+    gap: 15px;
+}
+input{
+    max-width: 100%;
+}
+.form-group > label{
+    color: aliceblue;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btnContactar{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px 10px;
+    width: 80px;
+    height: 35px;
+    font-weight: 800;
+    color: white;
+}
+
+.btnContactar:hover{
+    background-color: rgb(87, 87, 87);
+}
+
+.detail{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+}
+
+.detail > i{
+    margin: auto;
+}
+
+
+/* Footer */
+.f-copy{
+    background-color: rgb(84, 84, 84);
+    text-align: center;
+}
+
+
+
+.f-redes {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.f-redes > a{
+    color: rgb(185, 208, 228);
+}
+
+.f-social{
+    font-size: 2.1rem;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease;
+}
+
+.f-social:hover{
+    transform: translateY(-30px) scale(1.5); /* Desplaza hacia arriba y aumenta de tamaño */
+}
+
+
+
+/*  global classes */
+.d-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-100{
+    width: 100%;
+}
